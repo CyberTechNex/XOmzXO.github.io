@@ -1,5 +1,27 @@
+<html>
+<body>
+
+
+<h2>Crashing Now</h2>
+
+
+<p>Hit Ok To Crash</p>
+
+
+<p id="demo"></p>
+
+
 <script>
-window.location.href = document.location.href;
+onbeforeunload = function(){localStorage.x=1};
+
+
+if(confirm("Do you REALLY want me to crash your browser?")){
+  setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
+}
 </script>
-<title>Redirecting...</title>
-<h3>Redirecting...</h3>
+
+
+</body>
+</html>
